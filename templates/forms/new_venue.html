@@ -60,4 +60,38 @@
       <input type="submit" value="Create Venue" class="btn btn-primary btn-lg btn-block">
     </form>
   </div>
+  <!-- <script>
+    const checkbox = document.querySelector('#venue-talent');
+    var seeking_talent=false;
+    checkbox.onchange=function(e){
+      seeking_talent = e.target.checked;
+    }
+    document.getElementById('venue-form').onsubmit = function (e) {
+      // e.preventDefault();
+      console.log(document.getElementById('venue-name').value)
+      console.log(document.getElementById('venue-state').value)
+      console.log(document.getElementById('venue-description').value)
+      console.log(document.getElementById('venue-genre').value)
+      console.log(seeking_talent)
+      fetch('/venues/create', {
+          method: 'POST',
+          body: JSON.stringify({
+              'name': document.getElementById('venue-name').value,
+              'city': document.getElementById('venue-city').value,
+              'state': document.getElementById('venue-state').value,
+              'address': document.getElementById('venue-address').value,
+              'phone': document.getElementById('venue-phone').value,
+              'genre': document.getElementById('venue-genre').value,
+              'facebook_link': document.getElementById('venue-fb').value,
+              'image_link': document.getElementById('venue-img').value,
+              'website_link': document.getElementById('venue-wb').value,
+              'seeking_talent': seeking_talent,
+              'seeking_description': document.getElementById('venue-description').value,
+          }),
+          headers: {
+              'Content-Type': 'application/json'
+          }
+      })
+    }
+  </script> -->
 {% endblock %}
